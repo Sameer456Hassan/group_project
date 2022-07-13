@@ -1,0 +1,702 @@
+:root {
+    --theme-primary: rgb(0, 162, 255);
+    --theme-secondary: #000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button,
+button:focus,
+.btn,
+.btn:focus {
+    outline: 0;
+}
+
+section {
+    overflow: hidden;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.text-theme {
+    color: var(--theme-primary);
+}
+
+.btn-theme {
+    background-color: var(--theme-primary);
+    /* border-color: var(--theme-primary); */
+    border: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btn-theme:before {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #e32845;
+    bottom: -100%;
+    left: 0;
+    z-index: -1;
+}
+
+.btn-theme:hover {
+    color: white;
+}
+
+.btn-theme:hover:before {
+    bottom: 0px;
+}
+
+.btn-theme:focus {
+    box-shadow: 0 0 0 0.25rem rgb(245 131 30 / 25%);
+}
+
+
+/* Back To Top */
+
+#backToTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-primary);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-decoration: none;
+    box-shadow: 0 4px 10px 0px rgb(0 0 0 / 40%);
+}
+
+#backToTop i {
+    color: #fff;
+}
+
+#backToTop:hover {
+    cursor: pointer;
+    background-color: var(--theme-secondary);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login_style {
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(163 163 171 / 42%), rgb(50 116 157 / 90%)), url(../images/graduation.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+
+.login_style .container {
+    max-width: 500px;
+    /* box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #ffffff;
+    z-index: 3;
+    position: relative;
+    overflow: hidden; */
+}
+
+.login_style h2 {
+    font-size: 30px;
+    font-weight: 700;
+    /* color: rgb(186 84 245); */
+    color: white;
+}
+
+.login_under_heading {
+    color: white;
+}
+
+.login_style .change_log_page {
+    background-color: rgb(0, 162, 255);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.login_style .container img {
+    top: 0px;
+    left: 0px;
+    /* opacity: 0.7; */
+}
+
+.main-content form input {
+    background: white;
+    border: none;
+    /* border-bottom: 2px solid rgb(186 84 245); */
+    color: grey;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.07);
+    padding: 25px 20px;
+}
+
+.main-content form select {
+    background: white;
+    border: none;
+    /* border-bottom: 2px solid rgb(186 84 245); */
+    color: grey;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.07);
+    /* padding: 25px 20px; */
+    height: 50px;
+}
+
+.main-content form input:focus {
+    background: white;
+    border: none;
+    border-bottom: 2px solid rgb(186 84 245);
+    box-shadow: none;
+}
+
+.login_style form label {
+    color: white;
+}
+
+.login_style .nav-item .nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.login_style .nav-item .nav-link.active {
+    background-color: transparent;
+}
+
+.login_style .Log_In_btn {
+    padding: 5px 10px;
+    font-size: 20px;
+    /* float: right; */
+    background-color: rgb(0, 162, 255);
+    /* background: linear-gradient(125deg, #014f66,#2d8ef7, #f0abfe); */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    /* z-index: 2; */
+    width: 100%;
+}
+
+.login_heading {
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(186 84 245);
+}
+
+.admin_btn {
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 20px;
+    z-index: 4;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin_btn:hover {
+    color: rgb(0, 162, 255);
+    text-decoration: none;
+}
+
+.login_style .Log_In_btn:hover {
+    transform: translateY(-5px);
+}
+
+.dont_acount {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+
+.dont_acount a {
+    color: white;
+    font-weight: 500;
+}
+
+.form-cont {
+    background-color: white !important;
+    width: max-content;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.01);
+}
+
+.form-cont form label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-cont .line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.form_half_side {
+    background-color: transparent;
+    min-height: 100vh;
+}
+
+
+.sign_half_side {
+    min-height: 40vh;
+    background: url(../images/background_blue.png) top left repeat;
+    /* filter: hue-rotate(-155deg); */
+    background-size: cover;
+    z-index: 2;
+}
+
+
+
+/* =================================== */
+/* inner styling */
+/* =================================== */
+
+.nav_styling {
+    position: fixed;
+    /* left: 20%; */
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 22;
+}
+
+.nav_styling h1 {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.nav_styling h1 span {
+    color: rgb(0, 162, 255);
+}
+
+.nav_styling .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+    color: white !important;
+}
+
+.nav_styling .nav-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    height: 3px;
+    bottom: 0px;
+    background-color: rgb(0, 162, 255);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_styling .nav-link:hover:before {
+    left: 0%;
+}
+
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.5)), url(../images/banner-img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 40px;
+    font-family: 700;
+    font-family: 'poppins', sans-serif;
+    z-index: -1;
+}
+
+.hero button {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'poppins', sans-serif;
+
+}
+
+.choices {
+    border: 2px solid black;
+}
+
+.choice-cards {
+    /* border: 2px solid black; */
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.choice-cards:before {
+    position: absolute;
+    content: '';
+    background: rgba(0, 162, 255, 0.4);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.choice-cards::after {
+    position: absolute;
+    content: '';
+    background: #e32845;
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.choice-cards:hover::after {
+    width: 100%;
+    border-radius: 0;
+    left: 0;
+    right: auto;
+}
+
+.choice-cards1 {
+    background: url(../images/choice1.jpg);
+}
+
+.choice-cards2 {
+    background: url(../images/choice2.jpg);
+}
+
+.choice-cards3 {
+    background: url(../images/choice3.jpg);
+}
+
+.choice-cards4 {
+    background: url(../images/choice4.jpg);
+}
+
+.choice-cards h2 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: "Poppins", serif;
+}
+
+.choice-cards h3 {
+    font-weight: 500;
+    font-size: 15px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    position: relative;
+    color: white;
+}
+
+.course {
+    padding: 100px 0px;
+}
+
+.course h2 {
+    font-size: 35px;
+    font-weight: 700;
+    position: relative;
+    /* max-width: max-content !important; */
+}
+
+.course h2:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 25%;
+    bottom: -10px;
+    left: 2%;
+    background-color: var(--theme-primary);
+}
+
+.course .course_card {
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 3%);
+    padding: 10px 20px;
+    height: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.course .course_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.course .course_card i {
+    font-size: 35px;
+}
+
+.course .course_card1 {
+    border-right: 2px solid #0eb053;
+    ;
+}
+
+.course .course_card1 i {
+    color: #0eb053;
+
+}
+
+.course .course_card2 {
+    border-right: 2px solid #fd2a03;
+    ;
+}
+
+.course .course_card2 i {
+    color: #fd2a03;
+
+}
+
+.course .course_card3 {
+    border-right: 2px solid #079d92;
+    ;
+}
+
+.course .course_card3 i {
+    color: #079d92;
+
+}
+
+.course .course_card4 {
+    border-right: 2px solid #008be7;
+}
+
+.course .course_card4 i {
+    color: #008be7;
+}
+
+.course .course_card5 {
+    border-right: 2px solid #e1a500;
+    ;
+}
+
+.course .course_card5 i {
+    color: #e1a500;
+
+}
+
+.course .course_card6 {
+    border-right: 2px solid #9000ae;
+    ;
+}
+
+.course .course_card6 i {
+    color: #9000ae;
+
+}
+
+
+.course .course_card h3 {
+    font-size: 20px;
+}
+
+
+.footer{
+    background-color: #000;
+    padding: 10px 0px;
+}
+
+.footer h2{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.footer h2 span{
+    color: var(--theme-primary);
+}
+
+.footer p{
+    color: white;
+    margin-bottom: 0px;
+}
+
+.logout_button{
+    position: absolute;
+    background-color: white;
+    width: 140px;
+    z-index: 222;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+}
+
+.notifications{
+    position: absolute;
+    background-color: white;
+    width: 130px;
+    z-index: 222;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+    padding:  5px 10px;
+}
+
+.notifications hr{
+    margin-bottom: 5px;
+}
+
+.notifications h3{
+    font-size: 16px;
+}
+
+.message_button{
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border-radius: 100px;
+    bottom: 40px ;
+    right: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 222;
+}
+
+.message_button:hover{
+    transform: translateY(-5px);
+}
+
+.message_button i{
+    color: var(--theme-primary);
+    font-size: 50px;
+}
+
+.extra{
+    height: 40vh;
+    background: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.extra .row{
+    height: 40vh;
+}
+
+.extra h2{
+    color: white;
+    font-size: 30   px;
+    font-weight: 600;
+    font-family: 'poppins', sans-serif;
+}
+
+.extra .btn-theme2{
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    margin: 20px 0px;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.extra .btn-theme2:hover{
+    transform: translateY(-5px);
+}
+
+.unis{
+    padding: 100px 0px;
+}
+
+.unis h2{
+    font-size: 35px;
+    font-weight: 700;
+    position: relative;
+}
+
+.unis h2:before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 15%;
+    bottom: -10px;
+    left: 2%;
+    background-color: var(--theme-primary);
+}
+
+.uni_Card{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+    height: 350px;
+    overflow: hidden;
+}
+
+.uni_Card img{
+    width: 100%;
+    height: 200px;
+}
+
+.uni_Card h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.uni_Card .text_Area{
+    height: 150px;
+    padding: 0px 20px;
+}
+
+@media only screen and (max-width: 700px) {}
+
+@media only screen and (max-width: 900px) {
+    .form_half_side {
+        min-height: 60vh;
+        background-color: transparent;
+    }
+
+    .form_half_side:before {
+        display: none;
+    }
+
+    .login_style h2 {
+        text-align: center;
+    }
+
+    .login_style .change_log_page {
+        font-size: 16px;
+    }
+
+    .sign_half_side {
+        background: transparent;
+    }
+
+    .nav_styling {
+        left: 0px;
+
+        z-index: 2;
+    }
+}
+
+@media only screen and (max-width: 1100px) {}
